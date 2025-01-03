@@ -1,0 +1,373 @@
+@charset "UTF-8";
+
+
+:root{
+  --color-bg: #fcfcfc;
+  --color-font: #222;
+}
+/*** 폰트 기본설정 ***/
+@font-face {
+  font-family: 'TmoneyRoundWindExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TmoneyRoundWindRegular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+  @font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*** reset ***/
+*{margin: 0; padding: 0;}
+a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+li{
+  list-style: none;
+}
+body{
+  font-family: 'TmoneyRoundWindExtraBold'; 
+  height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-font);
+}
+main{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+
+/*** 내용물 ***/
+.header{
+  height: 250px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.menu{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menu > li{
+  position: relative;
+  flex:1;
+}
+.menu > li > a{
+  padding: 20px;
+  border-radius: 40px;
+}
+.menu > li:hover{
+  background-color: #eee;
+  border-radius: 40px;
+}
+.menu > li > .sub-menu{
+  width: 100%;
+  position: absolute;
+  display: none;
+  /* background-color: #eee; */
+  z-index: 10;
+}
+.menu > li:hover > .sub-menu{
+  display: block;
+  background-color: #eee;
+}
+.menu > li > .sub-menu > li{
+  padding: 10px;
+}
+.menu > li > .sub-menu > li > a:hover{
+  text-decoration: underline;
+}
+.h-logo > img{
+width: 200px;
+}
+.m-menu{
+  visibility: hidden;
+}
+.m-menu > a > img{
+  width: 50px;
+  height: 50px;
+}
+.card{
+  background-image: url(./img/와플\ 배경\ 하얗게.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+  position: relative;
+  margin: 20px 0;
+}
+.card > span{
+  width: 50%;
+font-weight:bolder;
+position: absolute;
+right: 0%;
+top: 50%;
+transform: translateY(-50%);
+font-size: 45px;
+color: #222;
+text-align: right;
+text-shadow: 2px 2px 2px #f1f1f1;
+padding: 0 30px;
+}
+
+.list{
+  width: 100%;
+  height: 740px;
+}
+.list > .list-txt{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+.list > .list-txt > span:nth-child(1){
+  color: #555;
+  padding-top: 10px;
+  font-size: 16px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+.list > .list-txt > span:nth-child(2){
+  font-size: 40px;
+  font-family: 'TmoneyRoundWindRegular';
+}
+.list > .list-wrap{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.list > .list-wrap > li{
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.list > .list-wrap > li:hover > .detail{
+  visibility: visible;
+}
+.list > .list-wrap > li > .detail{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: underline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.list > .list-wrap > li > a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+.list > .list-wrap > li > a > img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.list > .list-wrap > li > a > span{
+  font-size: 20px;
+  font-family: 'TmoneyRoundWindRegular';
+}
+.catalog{
+  font-family: 'TmoneyRoundWindRegular';
+  height: 600px;
+  display: flex;
+}
+.catalog > .catalog-txt{
+  background-color: #64462d;
+  color: #fff;
+  padding: 50px;
+}
+.catalog > .catalog-txt > p:nth-child(1){
+  font-size: 40px;
+  padding: 10px 0;
+}
+.catalog > .catalog-txt > hr{
+  width: 90%;
+  text-align: center;
+  border: 1.5px solid #fff;
+}
+.catalog > .catalog-txt > p:nth-child(3){
+  font-size: 25px;
+  padding: 50px 0;
+}
+.catalog > .catalog-txt > p:nth-child(4){
+  padding: 10px 0;
+  font-size: 16px;
+}
+.catalog > .catalog-txt >button{
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 0;
+}
+.catalog > .catalog-txt >button >a{
+  font-size: 18px;
+  font-family: 'TmoneyRoundWindRegular';
+  padding: 15px 25px;
+}
+.catalog > img{
+  width: 650px;
+  height: 600px;
+  opacity: 80%;
+}
+.site > .site-txt{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+.site > .site-txt > span:nth-child(1){
+  color: #555;
+  padding-top: 10px;
+  font-size: 16px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+.site > .site-txt > span:nth-child(2){
+  font-size: 38px;
+  font-family: 'TmoneyRoundWindRegular';
+  margin-bottom: 30px;
+}
+.site > .site-list{
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  align-items: center;
+} 
+.site > .site-list > li{
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  border: 1px solid #222;
+  box-sizing: border-box;
+}
+.site > .site-list > li > a > span{
+  font-family: 'TmoneyRoundWindRegular';
+}
+.footer{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.footer > .f-logo > img{
+  width: 200px;
+  padding: 30px;
+}
+.footer > .f-txt{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.footer > .f-txt > .f-menu{
+  font-family: 'TmoneyRoundWindRegular';
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer > .f-txt > .f-menu > li > a{
+  padding: 0 15px;
+  color: #555;
+}
+.footer > .f-txt > span{
+  font-size: 12px;
+  font-family: 'TmoneyRoundWindRegular';
+}
+
+
+/*** 모바일 / 태블릿 사이즈 통일 ***/
+
+@media screen and (max-width:768px) {
+  html{
+    font-size: 90%;
+  }
+
+  main{
+    width: 100%;
+    min-width: 320px;
+    margin: 50px auto;
+  }
+  main > section{
+    height: auto;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+  }
+  .menu{
+    display:  none;
+  }
+  .h-logo{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+  }
+  .card{
+    width: 100%;
+  }
+  .card > span{
+    position: absolute;
+    right:0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .list{
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .list > .list-wrap{
+    overflow: hidden;
+    width: 1200px;
+  }
+  .catalog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .catalog-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .catalog > img{
+    width: 100%;
+    height: 30%;
+  }
+  .m-menu{
+    visibility: visible;
+  }
+  .site > .site-list{
+    overflow: hidden;
+  }
+}
