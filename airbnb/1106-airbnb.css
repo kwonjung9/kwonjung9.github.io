@@ -358,10 +358,4 @@ footer>p:nth-child(2){
   nav > .btn > div{
     margin-top: 20px;
   }
-  nav > .btn > div:nth-child(1){
-    left: 5px;
-  }
-  nav > .btn > div:nth-child(2){
-    right: 5px;
-  }
 }
