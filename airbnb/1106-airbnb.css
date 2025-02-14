@@ -329,7 +329,7 @@ footer>p:nth-child(2){
   }
   nav > .icon {
     width: 80%;
-    margin-top: 30px;
+    margin-top: 80px;
   }
   header>.center{
     top: 50px
@@ -346,14 +346,22 @@ footer>p:nth-child(2){
   header{
     display: none;
   }
-  nav{
-    position: absolute;
-    top: 0;
-  }
   .mobile-menu{
     display: flex;
   }
   .card-list>.card{
     width: 100%;
+  }
+  nav > .icon {
+    margin-top: 120px;
+  }
+  nav > .btn > div{
+    margin-top: 20px;
+  }
+  nav > .btn > div:nth-child(1){
+    left: 5px;
+  }
+  nav > .btn > div:nth-child(2){
+    right: 5px;
   }
 }
