@@ -152,22 +152,29 @@ nav > .btn > div{
 }
 nav > .btn > div:nth-child(1){
   /*** 왼쪽 버튼 ***/
-  left: -20px;
+  left: 10px;
 }
 nav > .btn > div:nth-child(2){
   /*** 오른쪽 버튼 ***/
-  left: 80%;
+  left: 90%;
 }
 nav > .icon{
   color: #555;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   /* flex: 1; */
-  width: 80%;
+  width: 90%;
   overflow: hidden;
+  position: absolute;
+  left: 60px;
+  text-align: center;
 }
 nav > .icon > .item > img{
   width: 40px
+}
+nav > .icon > .item > p{
+  font-size: 0.8rem;
+  text-align: center;
 }
 nav > .filter{
   text-align: center;
@@ -180,6 +187,7 @@ nav > .filter{
 
 /*** card ***/
 .card-list{
+  margin-top: 60px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -197,27 +205,62 @@ nav > .filter{
   box-sizing: border-box;
   padding: 10px;
   aspect-ratio: 1;
-  background-image: url(./images/oldhouse.jpg);
-  background-color: #555;
+  /* background-color: #555; */
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.view-btn{
-  opacity: 0;
+.card-list > .card:nth-child(1) > .card-img{
+  background-image: url(./images/p-1.jpeg);
 }
-.card-list > .card > .card-img > .card-title>p{
+.card-list > .card:nth-child(2) > .card-img{
+  background-image: url(./images/p-2.jpeg);
+}
+.card-list > .card:nth-child(3) > .card-img{
+  background-image: url(./images/p-3.jpeg);
+}
+.card-list > .card:nth-child(4) > .card-img{
+  background-image: url(./images/p-4.jpg);
+}
+.card-list > .card:nth-child(5) > .card-img{
+  background-image: url(./images/p-5.jpeg);
+}
+.card-list > .card:nth-child(6) > .card-img{
+  background-image: url(./images/p-6.jpg);
+}
+.card-list > .card:nth-child(7) > .card-img{
+  background-image: url(./images/p-7.jpg);
+}
+.card-list > .card:nth-child(8) > .card-img{
+  background-image: url(./images/p-8.jpg);
+}
+.card-list > .card:nth-child(9) > .card-img{
+  background-image: url(./images/p-9.jpg);
+}
+.card-list > .card:nth-child(10) > .card-img{
+  background-image: url(./images/p-10.jpeg);
+}
+.card-list > .card:nth-child(11) > .card-img{
+  background-image: url(./images/p-11.jpg);
+}
+.card-list > .card:nth-child(12) > .card-img{
+  background-image: url(./images/p-12.jpeg);
+}
+.view-btn{
+  opacity: 1;
+}
+.card-list > .card > .card-img > .card-title> p{
   background-color: #fff;
   border-radius: 50px;
   padding: 3px 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.card-list > .card > .card-img > .card-title>i{
+.card-list > .card > .card-img > .card-title> i{
   color: #fff;
   font-size: 24px;
 }
-.card-list > .card > .card-img > .card-btn>p{
+.card-list > .card > .card-img > .card-btn> p{
   width: 15px;
   height: 15px;
   background-color: #fff;
@@ -253,6 +296,7 @@ cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
+
 /*** footer ***/
 footer{
   text-align: center;
@@ -277,11 +321,21 @@ footer>p:nth-child(2){
   }
 }
 @media screen and (max-width:950px) {
+  nav > .filter{
+    display: none;
+  }
   header{
     height: 200px;
   }
+  nav > .icon {
+    width: 80%;
+    margin-top: 30px;
+  }
   header>.center{
     top: 50px
+  }
+  .card-list{
+    margin-top: 100px;
   }
   .card-list>.card{
     width: 48%;
@@ -291,6 +345,10 @@ footer>p:nth-child(2){
 @media screen and (max-width:740px) {
   header{
     display: none;
+  }
+  nav{
+    position: absolute;
+    top: 0;
   }
   .mobile-menu{
     display: flex;
